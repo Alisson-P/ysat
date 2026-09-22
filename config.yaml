@@ -1,0 +1,66 @@
+# ysat :: user configuration
+#
+# Edit this file to tune the counterpoint. Every key is optional: delete a line and the
+# default comes back. A value outside its allowed range is clamped, never obeyed blindly.
+#
+# What this file CANNOT do: turn the skill into a yes man. The Locked Invariants section of
+# SKILL.md always wins (risk first, agreement must be earned, verdict changes only on new
+# evidence, pre mortem always runs, every claim carries a source, read only, no judging people).
+# Keys that contradict an invariant are ignored and reported once.
+
+# Output language. auto follows the language of the request.
+# auto | pt-BR | en-US | es-ES | any locale tag
+language: auto
+
+# How much evidence gathering before answering.
+# quick    : only the context already at hand, still runs the pre mortem
+# standard : M365 plus workspace files
+# deep     : adds web research, code and infrastructure sweeps, and prior incident history
+depth: standard
+
+# Maximum number of risks reported, ranked by severity. Allowed 3 to 8. Below 3 is clamped to 3,
+# because a counterpoint that reports one risk is a coin flip, not an analysis.
+max_risks: 5
+
+# Register of the wording. It changes HOW it is said, never WHAT the verdict is.
+# plain  : neutral and corporate, safe to forward
+# direct : senior colleague talking straight (default)
+# blunt  : no cushioning at all, shortest possible sentences
+bluntness: direct
+
+# Domains swept first. The others still get a quick pass so nothing obvious is missed.
+# Built in: architecture, security, data, cost, operations, delivery, vendor, people, compliance
+focus_domains:
+  - architecture
+  - security
+  - cost
+  - delivery
+
+# Evidence sources the skill is allowed to read. Remove one to keep it out of the analysis.
+# m365 (email, chat, files), code (workspace, IaC, pipelines), web (external signals), calendar
+sources:
+  - m365
+  - code
+  - web
+  - calendar
+
+# Where the answer lands.
+# chat | document (through the docx skill) | card (through render_ui)
+output_format: chat
+
+# When true, the output never uses the long dash or the medium dash.
+avoid_dashes: true
+
+# Your own non negotiables, appended to the analysis rules. One line each, plain language.
+# Examples:
+#   - Always check the licensing impact before recommending a Microsoft first party service.
+#   - Flag anything that touches customer data leaving the tenant, even at Low severity.
+house_rules: []
+
+# Your own checklist domains, swept together with the built in ones.
+# Example:
+#   - name: field delivery
+#     questions:
+#       - Does this change what was written in the signed statement of work?
+#       - Who on the delivery team has done this before?
+custom_domains: []
