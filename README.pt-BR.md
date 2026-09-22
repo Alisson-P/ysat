@@ -95,31 +95,29 @@ alcança. Tom, profundidade, idioma, domínios e formato são inteiramente seus.
 
 ## Instalar
 
-Bora instalar. A skill é uma pasta única que segue a [especificação Agent Skills](https://agentskills.io/specification)
-(`SKILL.md` com `name` e `description` no frontmatter), então funciona em qualquer agente compatível.
-A pasta precisa se chamar exatamente `ysat`, igual ao `name` do frontmatter.
+Bora instalar. A YSAT segue a [especificação Agent Skills](https://agentskills.io/specification).
 
-**Microsoft 365 Copilot (skills pessoais do Cowork)**
-
-```
-Documents/Cowork/skills/ysat/
-```
-
-Copie a pasta para lá, ou peça ao Copilot: *"cria uma skill a partir desse repositório"*. Ela aparece
-em uns 35 segundos.
-
-**Qualquer outro runtime compatível com Agent Skills**
+**1. Baixe a pasta**
 
 ```bash
-git clone https://github.com/Alisson-P/ysat.git ~/.agent/skills/ysat
+git clone https://github.com/Alisson-P/ysat.git
 ```
 
-Aponte para o diretório de skills que o seu runtime lê.
+Sem git? Botão **Code**, depois **Download ZIP**. Ela vem como `ysat-main`, renomeie para `ysat`.
 
-**Sem suporte a skills**
+**2. Mova a pasta `ysat` para a pasta de skills do agente**
 
-Cole o corpo do `SKILL.md` no seu prompt de sistema ou nas instruções personalizadas. Tudo que está
-abaixo do frontmatter funciona sozinho.
+| Agente | Destino |
+|---|---|
+| Microsoft 365 Copilot | `Documents/Cowork/skills/ysat/` |
+| Outros runtimes | `~/.agent/skills/ysat/` |
+
+No Copilot ela aparece em uns 35 segundos.
+
+> A pasta tem que se chamar exatamente `ysat`, igual ao `name` do frontmatter.
+> Se não bater, a skill não carrega e nenhum erro aparece.
+
+**Sem suporte a skills?** Cole o `SKILL.md` no prompt de sistema.
 
 ## Usar
 
