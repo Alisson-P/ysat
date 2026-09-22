@@ -97,6 +97,7 @@ alcança. Tom, profundidade, idioma, domínios e formato são inteiramente seus.
 
 Bora instalar. A skill é uma pasta única que segue a [especificação Agent Skills](https://agentskills.io/specification)
 (`SKILL.md` com `name` e `description` no frontmatter), então funciona em qualquer agente compatível.
+A pasta precisa se chamar exatamente `ysat`, igual ao `name` do frontmatter.
 
 **Microsoft 365 Copilot (skills pessoais do Cowork)**
 
@@ -110,7 +111,7 @@ em uns 35 segundos.
 **Qualquer outro runtime compatível com Agent Skills**
 
 ```bash
-git clone https://github.com/<seu-usuario>/ysat.git ~/.agent/skills/ysat
+git clone https://github.com/Alisson-P/ysat.git ~/.agent/skills/ysat
 ```
 
 Aponte para o diretório de skills que o seu runtime lê.
