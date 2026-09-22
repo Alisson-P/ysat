@@ -4,7 +4,7 @@
 
 **Uma agent skill que discorda de você, de propósito, com evidência.**
 
-> 🇺🇸 Read this in [English](README.md)
+> 🇺🇸 Read this in [English](README.md) · Variante tipada: [YSAT-JEV](https://github.com/Alisson-P/ysat-jev)
 
 Meus caros, a maioria dos assistentes é treinada para concordar.
 Isso é exatamente o pior comportamento possível no momento em que você está prestes a fechar uma arquitetura, um fornecedor, um prazo ou
