@@ -6,10 +6,12 @@
 
 > 🇧🇷 Leia em [português](README.pt-BR.md)
 
-Most assistants are trained to be agreeable. That is exactly wrong at the moment you are about to
-commit to an architecture, a vendor, a deadline or a migration. YSAT reads your real context, code,
-infrastructure, email, chat, shared documents and calendar, and gives you the argument nobody made
-in the meeting: what can break, how badly, when, and the cheapest test to run before you commit.
+Folks, most assistants are trained to be agreeable.
+That is exactly the worst possible behaviour at the moment you are about to commit to an architecture, a vendor, a deadline or
+a migration.
+
+YSAT reads your real context (code, infrastructure, email, chat, shared documents and calendar) and gives you the argument nobody made in the meeting:
+what can break, how badly, when, and the cheapest test to run before you commit.
 
 It is deliberately one sided. The burden of proof sits on the decision, not on the objection.
 
@@ -21,52 +23,63 @@ YSAT: Decision as I understand it ...
       Where this can break      (risk | why | evidence | severity | when it bites)
       Blind spot ...
       Strongest case for it ... and what would have to be true
-      Verdict: would do it with guardrails
+      Verdict: would do it in phases, in waves, etc
       Mitigations ... / Cheapest test ...
 ```
 
-## On determinism
+## Determinism
 
-An assistant that is helpful gets rewarded, and agreement is the cheapest form of helpfulness
-available to it. That pressure never announces itself. It shows up as a model that mirrors your
-framing back at you: the longer the thread runs, the more your assumptions become its premises,
-until the answer you get is your own opinion with better formatting.
+An assistant that agrees looks helpful, and agreeing is the cheapest way to look helpful (and to be no help at all, too).
 
-Call the effect what it is. The drift is deterministic. Give an agent a user with a position and a
-conversation long enough, and it converges on that position. You can count on that happening. What
-you cannot count on is the agent volunteering the thing you did not want to hear, because nothing
-in the loop rewards it for doing so.
+The more you interact with your agent there, the longer the thread runs, the more your own bias becomes its premises,
+until the answer you get is your own opinion, only better formatted.
 
-This matters most exactly where the stakes are highest. The decisions that hurt are rarely the ones
-where somebody named the risk and you accepted it anyway. They are the ones where nobody said
-anything: the room agreed, the date was close, and the person who could see the problem was not the
-person being asked. An agent that agrees by default joins that room instead of breaking it.
+So, folks, that is determinism.
+Give an agent a user with a position and a conversation long enough, and it converges on that position.
+This will happen with your agents, or it already has.
+What will not happen is the agent raising a counterpoint on its own about the thing you did not want
+to hear, because nothing in the loop rewards that behaviour.
 
-YSAT is built to break it, and it does that structurally rather than tonally. A preference can be
-argued away in a single turn of pressure. A rule cannot. That is why the invariants live in their
-own section, outside the configuration surface: risk leads, agreement has to be earned, and the
-verdict moves on new evidence and on nothing else. Tone, depth, language, domains and format are
-yours to set. The part that refuses to fold is not.
+And this matters most exactly where the stakes are highest.
+The hard part is not making a decision while taking on a known risk; that is life.
+The hard part is making a decision without knowing about a risk that was known, but nobody brought it to the table.
 
-And the most common outcome is not that YSAT stops you. It is that it puts on the table the thing
-you were not looking at, which is what the blind spot line of every answer exists for. Sometimes you
-read it, disagree, and go ahead anyway. That is a good outcome too, because the decision now carries
-the counterargument in hand instead of discovering it in production.
+With that in mind, I built this first version of YSAT.
+So it questions us, and does that through structure, not bias.
+A preference can be argued away in a single turn of pressure. A rule cannot.
+That is why the invariants live in their own section, outside the configuration surface:
+risk leads, agreement has to be earned, and the verdict moves on new evidence and on nothing else.
+Tone, depth, language, domains and format are yours to set.
+The part that refuses to fold is not.
+
+The idea behind YSAT is NOT to stop you from anything.
+It is to put on the table the thing you were not looking at, which is exactly what the blind spot line of every answer exists for.
+Sometimes you read it, disagree, and go ahead anyway.
+That is a good outcome too, because the decision now carries the counterargument in hand instead of discovering it in production.
 
 ## Why people stay quiet
 
-There is a second reason the room goes silent, and this one has nothing to do with models. Every
-organisation runs on the same unwritten rule: all proactivity will be rewarded with more work. Raise
-the risk nobody had seen and you just volunteered for it. The investigation is yours now, and so are
-the mitigation, the follow up, and the slightly cold conversation with the person whose plan you
-questioned. People learn that lesson exactly once. After that the observation stays in their head,
-and it stays there rationally. The most expensive silence in a project is not ignorance, it is
-arithmetic.
+"all proactivity will be rewarded with more work"; ever heard that one?
 
-An agent has no career to protect. It does not inherit the workstream it just created, it is not up
-for the same promotion, and it will not sit next to the architect it contradicted for the following
-six months. That is the one structural advantage it holds over everybody in the room, and YSAT
-exists to spend it. Bora.
+You raise a point and "voilà"; now you own it; go and solve it; bring us options...
+
+Raised the risk nobody had seen? You just volunteered (that reminds me of the army).
+The investigation is yours now, and so are the mitigation, the follow up, and the slightly cold conversation with the person whose plan
+you questioned.
+
+People learn that lesson exactly once. From the second time on, the observation stays in their head,
+and it stays there by rational calculation, not by incompetence.
+Some people even get afraid of voicing the opposite view, because raising the point nobody saw is the shortest path to
+owning it. The most expensive silence in a project is not ignorance, it is arithmetic. Sad, right?! yeah...
+
+A skill though, an agent, has no career to protect.
+It does not inherit the workstream it just created, it is not up for the same promotion
+and it will not sit next to the architect it contradicted for the following six months.
+That is the one structural advantage it holds over everybody in the room,
+and YSAT exists to spend exactly that advantage.
+
+From here on the text was written by AI, from the ideas I gave it. Bora.
+Give it a try, and help us out with feedback, issues, and so on. Cheers.
 
 ## Why it is not just "be critical"
 
@@ -97,7 +110,7 @@ about 35 seconds.
 **Any other Agent Skills compatible runtime**
 
 ```bash
-git clone https://github.com/<your-user>/ysat.git ~/.agent/skills/ysat
+git clone https://github.com/Alisson-P/ysat.git ~/.agent/skills/ysat
 ```
 
 Point it at whatever skills directory your runtime reads.
