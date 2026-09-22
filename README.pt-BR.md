@@ -59,9 +59,9 @@ Esse também é um bom resultado, porque agora a decisão carrega o contra-argum
 
 ## Por que ninguém levanta a mão
 
-"toda proatividade será recompensando com mais trabalho"; já ouviu isso?
+"toda proatividade será recompensada com mais trabalho"; já ouviu isso?
 
-Você levanta um ponto e "voilà"; agora vc é o dono disso; vai lá e resolve; traga-nos opções.
+Você levanta um ponto e "voilà"; agora vc é o dono disso; vai lá e resolve; traga-nos opções...
 
 Levantou o risco que ninguém tinha visto? Acabou de se voluntariar (lembrei do exército agora).
 A investigação agora é sua, e junto vêm a mitigação, o acompanhamento e aquela conversa meio fria com quem propôs o plano
