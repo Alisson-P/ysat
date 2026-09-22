@@ -6,11 +6,12 @@
 
 > 🇺🇸 Read this in [English](README.md)
 
-Meus caros, a maioria dos assistentes é treinada para concordar. Isso é exatamente o pior comportamento
-possível no momento em que você está prestes a fechar uma arquitetura, um fornecedor, um prazo ou
-uma migração. A YSAT lê o seu contexto real (código, infraestrutura, e-mail, chat, documentos
-compartilhados e agenda) e te devolve o argumento que ninguém fez na reunião: o que pode quebrar,
-com que gravidade, quando, e qual o teste mais barato para rodar antes de você se comprometer.
+Meus caros, a maioria dos assistentes é treinada para concordar.
+Isso é exatamente o pior comportamento possível no momento em que você está prestes a fechar uma arquitetura, um fornecedor, um prazo ou
+uma migração.
+
+A YSAT lê o seu contexto real (código, infraestrutura, e-mail, chat, documentos compartilhados e agenda) e te devolve o argumento que ninguém fez na reunião:
+o que pode quebrar, com que gravidade, quando, e qual o teste mais barato para rodar antes de você se comprometer.
 
 Ela é deliberadamente assimétrica. O ônus da prova fica com a decisão, não com a objeção.
 
@@ -22,53 +23,63 @@ YSAT: Decisão como eu entendi ...
       Onde isso pode quebrar    (risco | por quê | evidência | severidade | quando dói)
       Ponto cego ...
       Melhor argumento a favor ... e o que teria que ser verdade
-      Veredito: faria com trilho
+      Veredito: faria por fases, em ondas, etc
       Mitigações ... / Teste mais barato ...
 ```
 
-## Sobre determinismo
+## Determinismo
 
-Assistente que concorda parece útil, e concordar é a forma mais barata de parecer útil. O efeito
-nunca se anuncia. Ele aparece como um modelo que devolve o seu próprio enquadramento: quanto mais
-longa a conversa, mais as suas premissas viram as premissas dele, até o ponto em que a resposta que
-você recebe é a sua própria opinião, só que melhor formatada.
+Assistente que concorda parece útil, e concordar é a forma mais barata de parecer útil (e de não ajudar em nada tbem).
 
-Então, meus bons, vamos chamar o efeito pelo nome. A deriva é determinística. Dê a um agente um usuário com uma
-posição e uma conversa comprida o bastante, e ele converge para essa posição. Dá para contar com
-isso acontecendo. O que não dá para contar é que ele levante sozinho aquilo que você não queria
+Quanto mais vc interage com seu agente aí, quanto mais longa a conversa, mais o seu viés viram as premissas dele,
+até o ponto em que a resposta que você recebe é a sua própria opinião, só que melhor formatada.
+
+Então, meus bons, isso é o determinismo.
+Dê a um agente um usuário com uma posição e uma conversa comprida o bastante, e ele converge para essa posição.
+Isso vai acontecer com seus agentes, ou já aconteceu.
+O que não irá acontecer é o agente levantando um contra-ponto sozinho daquilo que você não queria
 ouvir, porque nada no ciclo premia esse comportamento.
 
-E isso importa mais justamente onde o risco é maior. Decisão que dói quase nunca é aquela em que
-alguém apontou o problema e você assumiu mesmo assim. É aquela em que ninguém falou nada: a sala
-concordou, a data estava perto, e quem enxergava o problema não era quem estava sendo perguntado. Um
-agente que concorda por padrão entra nessa sala em vez de quebrar ela.
+E isso importa mais justamente onde o risco é maior.
+Difícil não é tomar uma decisão assumindo um risco conhecido; isso é a vida.
+Difícil é tomar uma decisão sem saber de um risco que era conhecido, mas ninguém trouxe isso pra mesa.
 
-A YSAT foi feita para quebrar, e faz isso por estrutura, não por tom. Preferência se derruba em um
-único turno de pressão. Regra não. Por isso os invariantes ficam em uma seção própria, fora da área
-configurável: risco primeiro, concordância precisa ser justificada, e o veredito só se move com
-evidência nova. Tom, profundidade, idioma, domínios e formato são seus para ajustar. A parte que se
-recusa a ceder, não.
+Pensando nisso, criei essa primeira versão da YSAT.
+Pra ela nos questionar, e fazer isso pensando na estrutura, não viés.
+Preferência se derruba em um único turno de pressão. Regra não.
+Por isso os invariantes ficam em uma seção própria, fora da área configurável:
+risco primeiro, concordância precisa ser justificada, e o veredito só se move com evidência nova.
+Tom, profundidade, idioma, domínios e formato são seus para ajustar.
+A parte que se recusa a ceder, não.
 
-E o resultado mais comum não é a YSAT te impedir de nada. É ela colocar na mesa aquilo que você não
-estava olhando, que é exatamente para isso que existe a linha de ponto cego em toda resposta. Às
-vezes você lê, discorda e segue em frente do mesmo jeito. Esse também é um bom resultado, porque
-agora a decisão carrega o contra-argumento na mão, em vez de descobrir ele em produção.
+A ideia da YSAT NÃO É te impedir de nada.
+É ela colocar na mesa aquilo que você não estava olhando, que é exatamente para isso que existe a linha de ponto cego em toda resposta.
+Às vezes você lê, discorda e segue em frente do mesmo jeito.
+Esse também é um bom resultado, porque agora a decisão carrega o contra-argumento na mão, em vez de descobrir ele em produção.
 
 ## Por que ninguém levanta a mão
 
-Tem um segundo motivo para a sala ficar em silêncio, e esse não tem nada a ver com modelo de IA.
-Toda organização roda com a mesma regra não escrita: toda proatividade será recompensada com mais
-trabalho. Levantou o risco que ninguém tinha visto? Acabou de se voluntariar. A investigação agora é
-sua, e junto vêm a mitigação, o acompanhamento e aquela conversa meio fria com quem propôs o plano
-que você questionou. A pessoa aprende essa lição uma vez só. Da segunda em diante, a observação fica
-na cabeça dela, e fica por cálculo racional, não por incompetência. Tem gente que chega a sentir
-medo de dar a opinião contrária, porque levantar o ponto que ninguém viu é o caminho mais curto para
-virar o dono dele. O silêncio mais caro de um projeto não é desconhecimento, é conta de padeiro.
+"toda proatividade será recompensando com mais trabalho"; já ouviu isso?
 
-Agente não tem carreira para proteger. Ele não herda a frente de trabalho que acabou de criar, não
-disputa a mesma promoção e não vai sentar do lado do arquiteto que ele contrariou pelos próximos
-seis meses. Essa é a única vantagem estrutural que ele tem sobre todo mundo na sala, e a YSAT existe
-para gastar exatamente essa vantagem. Bora.
+Você levanta um ponto e "voilà"; agora vc é o dono disso; vai lá e resolve; traga-nos opções.
+
+Levantou o risco que ninguém tinha visto? Acabou de se voluntariar (lembrei do exército agora).
+A investigação agora é sua, e junto vêm a mitigação, o acompanhamento e aquela conversa meio fria com quem propôs o plano
+que você questionou.
+
+A pessoa aprende essa lição uma vez só. Da segunda em diante, a observação fica na cabeça dela,
+e fica por cálculo racional, não por incompetência.
+Tem gente que chega a sentir medo de dar a opinião contrária, porque levantar o ponto que ninguém viu é o caminho mais curto para
+virar o dono dele. O silêncio mais caro de um projeto não é desconhecimento, é conta de padeiro. Triste, né?! pois é...
+
+Contudo, uma skill, um agente não tem carreira para proteger.
+Ele não herda a frente de trabalho que acabou de criar, não disputa a mesma promoção
+e não vai sentar do lado do arquiteto que ele contrariou pelos próximos seis meses.
+Essa é a única vantagem estrutural que ele tem sobre todo mundo na sala,
+e a YSAT existe para gastar exatamente essa vantagem.
+
+Daqui em diante é texto construído por IA, com as ideias que eu passei. Bora.
+Testa aí, e nos ajude com feedbacks, issues, etc. TMJ
 
 ## Por que isso não é só "ser crítico"
 
