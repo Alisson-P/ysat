@@ -95,30 +95,32 @@ depth, language, domains and format are fully yours. Calibration is not.
 
 ## Install
 
-Bora. The skill is a single folder that follows the [Agent Skills specification](https://agentskills.io/specification)
-(`SKILL.md` with `name` and `description` frontmatter), so it works in any agent that supports it.
+Bora. YSAT is a single folder that follows the [Agent Skills specification](https://agentskills.io/specification),
+so it works in any agent that supports it.
 
-**Microsoft 365 Copilot (Cowork personal skills)**
-
-```
-Documents/Cowork/skills/ysat/
-```
-
-Copy the folder there, or ask Copilot: *"create a skill from this repository"*. It appears within
-about 35 seconds.
-
-**Any other Agent Skills compatible runtime**
+**1. Get the folder**
 
 ```bash
-git clone https://github.com/Alisson-P/ysat.git ~/.agent/skills/ysat
+git clone https://github.com/Alisson-P/ysat.git
 ```
 
-Point it at whatever skills directory your runtime reads.
+No git? Use the green **Code** button at the top of this page, then **Download ZIP**, and unzip it.
+It comes out named `ysat-main`, so rename it to `ysat`.
 
-**No skill support at all**
+**2. Move the `ysat` folder into your agent's skills folder**
 
-Paste the body of `SKILL.md` into your system prompt or custom instructions. Everything below the
-frontmatter works standalone.
+| Agent | Where it goes |
+|---|---|
+| Microsoft 365 Copilot (Cowork) | `Documents/Cowork/skills/ysat/` |
+| Any other Agent Skills runtime | usually `~/.agent/skills/ysat/` |
+
+In Copilot it shows up within about 35 seconds.
+
+> The folder has to be named exactly `ysat`, the same as `name` in the frontmatter. If it does not
+> match, the skill never loads and no error is shown.
+
+**No skill support at all?** Paste the body of `SKILL.md` into your system prompt or custom
+instructions. Everything below the frontmatter works standalone.
 
 ## Use it
 
