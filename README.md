@@ -4,7 +4,7 @@
 
 **An agent skill that disagrees with you, on purpose, with evidence.**
 
-> 🇧🇷 Leia em [português](README.pt-BR.md)
+> 🇧🇷 Leia em [português](README.pt-BR.md) · Typed variant: [YSAT-JEV](https://github.com/Alisson-P/ysat-jev)
 
 Folks, most assistants are trained to be agreeable.
 That is exactly the worst possible behaviour at the moment you are about to commit to an architecture, a vendor, a deadline or
