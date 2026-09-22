@@ -106,8 +106,6 @@ git clone https://github.com/Alisson-P/ysat.git
 Sem git? Vá para a página inicial do repositório e clique no botão verde **Code**, à direita,
 logo acima da lista de arquivos. Não é a aba Code do menu de cima. Depois **Download ZIP**.
 A pasta vem como `ysat-main`, renomeie para `ysat`.
-logo acima da lista de arquivos. Nao e a aba Code do menu de cima. Depois **Download ZIP**.
-A pasta vem como `ysat-main`, renomeie para `ysat`.
 
 **2. Mova a pasta `ysat` para a pasta de skills do agente**
 
